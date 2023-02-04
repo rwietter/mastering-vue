@@ -2,7 +2,7 @@
   <header>
     <h1>My App</h1>
     <nav>
-      <router-link to="/counter">Counter</router-link>
+      <router-link to="/">Counter</router-link>
       <router-link to="/todo">Todo</router-link>
       <router-link to="/profile">Sign</router-link>
     </nav>
