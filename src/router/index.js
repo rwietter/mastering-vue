@@ -1,16 +1,17 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Home.vue'
+import Counter from '../views/Counter.vue'
+import Todo from '../views/Todo.vue'
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: '/counter',
+    name: 'Counter',
+    component: Counter
   },
   {
-    path: '/about',
-    name: 'About',
-    component: () => import('../views/About.vue') // route level code-splitting
+    path: '/todo',
+    name: 'Todo',
+    component: Todo // route level code-splitting
   },
   {
     path: '/profile',

@@ -1,4 +1,4 @@
-<script>
+<script lang="js">
 import Counter from '../components/Counter.vue';
 
 export default {
@@ -9,7 +9,5 @@ export default {
 </script>
 
 <template>
-  <div>
-    <Counter msg="A Counter" />
-  </div>
+  <Counter msg="A Counter" />
 </template>

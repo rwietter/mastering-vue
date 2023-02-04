@@ -23,7 +23,7 @@ const handleClick = () => {
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .counter {
   display: flex;
   flex-direction: column;

@@ -1,15 +1,24 @@
-<script setup>
+<script>
+import Header from './components/Header.vue'
+
+export default {
+  components: {
+    Header
+  }
+}
 </script>
 
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/profile">Profile</router-link>
-  </div>
-  <router-view />
+  <Header />
+  <RouterView />
 </template>
 
-<style lang="scss">
-
+<style lang="scss" scoped>
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 4rem);
+}
 </style>
