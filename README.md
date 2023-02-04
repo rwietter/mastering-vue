@@ -99,6 +99,48 @@ onMounted(() => {
 </template>
 ```
 
+### API Options vs Composition API
+
+```js
+// API Options
+export default {
+  data() {
+    return {
+      count: 0
+    }
+  },
+
+  methods: {
+    increment() {
+      this.count++
+    }
+  },
+
+  props: {
+    msg: String
+  }
+}
+```
+
+```js
+// Composition API
+import { ref } from 'vue'
+
+defineProps({
+  msg: String,
+})
+
+const count = ref(0)
+
+const handleClick = () => {
+  count.value++
+}
+
+onMounted(() => {
+  console.log(`The initial count is ${count.value}.`)
+})
+```
+
 ### Interpolação de texto
 
 A interpolação de texto é uma das formas mais básicas de vincular dados ao modelo. A sintaxe de interpolação de texto é muito simples: colocar o nome de uma variável entre dois parênteses duplos ({{ mustache }}).

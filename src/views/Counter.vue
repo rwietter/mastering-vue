@@ -9,5 +9,7 @@ export default {
 </script>
 
 <template>
-  <Counter msg="A Counter" />
+  <div class="container">
+    <Counter msg="A Counter" />
+  </div>
 </template>

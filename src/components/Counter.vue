@@ -1,16 +1,31 @@
-<script setup>
-import { ref } from 'vue'
+<script>
+export default {
+  data() {
+    return {
+      count: 0
+    }
+  },
 
-defineProps({
-  msg: String,
-})
+  methods: {
+    increment() {
+      this.count++
+    }
+  },
 
-const count = ref(0)
+  props: {
+    msg: String
+  },
 
-const handleClick = () => {
-  count.value++
+  mounted() {
+    alert(`Hello from ${this.msg}!`)
+  },
+
+  computed: {
+    computedCount() {
+      return this.count
+    }
+  }
 }
-
 </script>
 
 <template>
@@ -18,7 +33,8 @@ const handleClick = () => {
     <h1 class="title">{{ msg || 'Counter' }}</h1>
 
     <div class="card">
-      <button type="button" @click="handleClick">count is {{ count }}</button>
+      <button type="button" @click="increment">count is {{ count }}</button>
+      <span class="computed">Computed {{ computedCount }}</span>
     </div>
   </div>
 </template>
@@ -26,8 +42,10 @@ const handleClick = () => {
 <style lang="scss" scoped>
 .counter {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  min-height: calc(100vh - 4rem);
+  flex-flow: column;
 
   >.title {
     color: #1a222e;
@@ -37,6 +55,13 @@ const handleClick = () => {
   >.read-the-docs {
     color: #e11f1f;
   }
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .card button {
@@ -57,5 +82,11 @@ const handleClick = () => {
   &:hover {
     background-color: #f5f5f5;
   }
+}
+
+.computed {
+  color: #1a222e;
+  font-size: 0.8rem;
+  text-align: center;
 }
 </style>
