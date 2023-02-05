@@ -14,9 +14,9 @@ const routes = [
     component: Todo // route level code-splitting
   },
   {
-    path: '/profile',
-    name: 'Profile',
-    component: () => import('../views/Profile.vue') // route level code-splitting
+    path: '/http',
+    name: 'Http',
+    component: () => import('../views/HttpRequest.vue') // route level code-splitting
   }
 ]
 

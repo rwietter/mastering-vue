@@ -4,7 +4,7 @@
     <nav>
       <router-link to="/">Counter</router-link>
       <router-link to="/todo">Todo</router-link>
-      <router-link to="/profile">Sign</router-link>
+      <router-link to="/http">Http</router-link>
     </nav>
   </header>
 </template>

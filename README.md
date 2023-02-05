@@ -155,6 +155,31 @@ A interpolação de texto é uma das formas mais básicas de vincular dados ao m
 
 As diretivas são atributos especiais com prefixo v- que são adicionados ao modelo. Elas são responsáveis ​​por fazer o modelo reativo, ou seja, quando o valor de uma variável é alterado, o modelo é atualizado automaticamente.
 
+As diretivas em Vue.js são instruções usadas em elementos HTML para realizar ações específicas. Algumas diretivas comuns incluem:
+
+- v-if: renderiza o elemento apenas se a expressão for verdadeira
+- v-for: itera sobre um array e renderiza o elemento para cada item
+- v-bind: vincula o valor de uma expressão a um atributo do elemento
+- v-on: adiciona um manipulador de evento ao elemento
+- v-model: cria duas-vias de ligação entre o valor de um elemento e uma propriedade Vue
+
+Cada diretiva tem um propósito e funcionalidade específicos, e elas podem ser combinadas para criar aplicativos de interface de usuário dinâmicos e reativos.
+
+A diretiva v-bind é usada para vincular valores JavaScript a atributos HTML. Por exemplo, você pode usar v-bind para vincular o valor de uma propriedade Vue ao valor de um atributo HTML. Aqui, o atributo id do elemento div será vinculado ao valor da propriedade idAttribute em seu componente Vue. Se o valor da propriedade mudar, o atributo também será atualizado automaticamente:
+
+```js
+<div v-bind:id="idAttribute"></div>
+```
+
+Já a diretiva v-model é uma abreviação para v-bind e v-on. Ela é usada para criar duas-vias de ligação entre o valor de um elemento HTML e uma propriedade Vue. Por exemplo, você pode usar v-model para vincular o valor de uma caixa de texto a uma propriedade Vue.
+
+Aqui, o valor da caixa de texto será sincronizado com a propriedade message em seu componente Vue. Se você mudar o valor da propriedade message, o valor da caixa de texto será atualizado automaticamente, e se você digitar no campo de texto, o valor da propriedade será atualizado automaticamente.
+
+```js
+<input type="text" v-model="message">
+```
+
+
 ```js
 <div id="app">
   <p v-if="seen">Agora você me vê</p>

@@ -1,19 +1,28 @@
+<script lang="js">
+import HttpRequest from '../components/HttpRequest.vue';
+
+export default {
+  components: {
+    HttpRequest
+  }
+}
+
+</script>
+
 <template>
-  <div class="profile">
-    <h1 class="title">Profile</h1>
-    <div class="card">
-      <button type="button">Sign In</button>
-    </div>
+  <div class="http-container">
+    <h1 class="title">Http Request</h1>
+    <HttpRequest />
   </div>
 </template>
 
 <style scoped lang="scss">
-.profile {
+.http-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: calc(100vh - 4rem);
   flex-flow: column;
+  padding-top: 2rem;
 }
 
 .title {
