@@ -16,10 +16,6 @@ export default {
     msg: String
   },
 
-  mounted() {
-    alert(`Hello from ${this.msg}!`)
-  },
-
   computed: {
     computedCount() {
       return this.count
