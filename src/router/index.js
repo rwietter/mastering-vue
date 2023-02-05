@@ -17,6 +17,16 @@ const routes = [
     path: '/http',
     name: 'Http',
     component: () => import('../views/HttpRequest.vue') // route level code-splitting
+  },
+  {
+    path: '/signup',
+    name: 'Signup',
+    component: () => import('../views/Signup.vue') // route level code-splitting
+  },
+  {
+    path: '/signin',
+    name: 'Signin',
+    component: () => import('../views/Signin.vue') // route level code-splitting
   }
 ]
 
